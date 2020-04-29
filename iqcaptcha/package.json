@@ -1,0 +1,11 @@
+{
+  "name": "iqcaptcha",
+  "version": "1.0.0",
+  "description": "Package for IQCaptcha creation.",
+  "dependencies": {
+    "canvas": "^2.5.0"
+  },
+  "main": "index.js",
+  "author": "Kristian",
+  "license": "ISC"
+}

@@ -1,0 +1,128 @@
+.iqCaptchaModal {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    position: fixed;
+    display: none;
+
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    text-align: center;
+    overflow: auto;
+    z-index: 10;
+    font-size: 22px;
+
+    background: white;
+    background: linear-gradient(90deg, rgba(0, 0, 50, 0.4) 0%, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 1) 70%, rgba(0, 0, 50, 0.4) 100%);
+
+    animation-name: comedown;
+    animation-duration: .2s;
+}
+
+.iqcLabel {
+    margin: 2px auto 1em auto;
+    max-width: 60%;
+}
+
+.iqcImage {
+    margin: 0 auto 1em auto;
+    max-width: 92%;
+    max-height: 60%;
+}
+
+.iqCaptchaModal .btnSubmit {
+    background-color: #32cb00;
+    box-shadow: 0 0 3px 4px #64dd17;
+}
+
+.iqCaptchaModal .btnRegen {
+    background-color: #007bff;
+    box-shadow: 0 0 3px 4px #7ab8fa;
+}
+
+.iqCaptchaModal .btnClose {
+    background-color: #c30000;
+    box-shadow: 0 0 3px 4px #dd2c00;
+}
+
+.iqCaptchaModal .btnSound {
+    background-color: #7200ca;
+    box-shadow: 0 0 3px 4px #aa00ff;
+}
+
+.iqcButton:hover {
+    box-shadow: 0 0 3px 4px #ffea00;
+}
+
+.iqcInput {
+    max-width: 4em;
+    text-align: center;
+    height: 1.5em;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.iqcButton {
+    font-family: inherit;
+    color: white;
+    font-weight: bold;
+    padding: .5em;
+
+    display: block;
+    margin: 1em auto;
+    border: 0;
+    cursor: pointer;
+    vertical-align: top;
+
+    -webkit-transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -ms-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s;
+    transition: box-shadow .5s;
+}
+
+@media (orientation: landscape) {
+    .iqcButton {
+        font-size: medium;
+        width: 25%;
+        height: 2em;
+        min-height: 40px;
+        min-width: 200px;
+        max-width: 25%;
+    }
+
+    .iqCaptchaModal .btnRegen {
+        margin-right: 2em;
+    }
+
+    .iqCaptchaModal .btnClose {
+        margin-left: 2em;
+    }
+
+    .iqcButton:not(.btnSubmit) {
+        display: inline;
+    }
+}
+
+@media (orientation: portrait) {
+    .iqcButton, .iqcLabel, .iqcInput {
+        font-size: 2em;
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .iqcImage {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+@keyframes comedown {
+    from {
+        top: -100vh
+    }
+    to{
+        top: 0
+    }
+}

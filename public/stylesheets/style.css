@@ -1,0 +1,86 @@
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+.comments {
+    box-shadow: 0 0 3px 1px black;
+    background-color: #f5f5f5;
+    padding: .3em 1em;
+    min-width: 500px;
+    max-width: 50%;
+    top: 2%;
+    margin: 0 auto;
+    position: relative;
+    font-size: 125%;
+}
+
+.comments > textarea, input {
+    width: 80%;
+    box-shadow: 0 0 1px 1px #7ab8fa;
+    border-style: none;
+    margin: 0 auto;
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: .3em;
+    max-width: 80%;
+}
+
+.comments > input {
+    margin-bottom: 3px;
+}
+
+.comments > .comment {
+    margin: 0 auto 1em 0;
+    max-width: 90%;
+    background-color: white;
+    word-wrap: break-word;
+}
+
+.comment > .commentHead, .commentBody {
+    display: block;
+    padding: .3em;
+}
+
+.comment > .commentHead {
+    border-bottom-style: solid;
+    border-bottom-color: #f5f5f5;
+    border-bottom-width: 4px;
+    font-size: 60%;
+}
+
+.comment > .commentBody {
+    padding: .3em;
+    min-height: 30px;
+}
+
+.comments button {
+    color: white;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-size: 115%;
+    border-radius: 6px;
+    border-style: none;
+    transition: ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.comments > button {
+    display: block;
+    width: 80%;
+    margin: 1em auto;
+    height: 3em;
+    background-color: #007bff;
+    box-shadow: 0 0 3px 4px #7ab8fa;
+}
+
+.comments button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px 4px rgba(245, 255, 0, 0.51);
+}

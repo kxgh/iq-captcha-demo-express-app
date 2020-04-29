@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    article.comments
+        h1="Comments"
+        span.line
+        each com in comments
+            section.comment
+                span.commentHead=com.nick + ", " + com.date
+                span.commentBody=com.body
+        h2 Add a comment
+        input#inputNick(placeholder="Your nickname")
+        textarea#inputComment(rows=3 placeholder="Your comment (required)")
+        button#btnAddComment Add comment
+    script(src='/javascripts/iqcScript.js' type="text/javascript")
+    script(src='/javascripts/commentScript.js' type="text/javascript")
