@@ -1,18 +1,14 @@
 'use strict';
-const CaptchaAuthr = require('./captcha-authr'),
-    IQC = require('./iqcaptcha');
+const {CaptchaAuthr, CaptchaMgr} = require('@kxghnpm/kx-iqcaptcha');
 
-const iqc = new IQC();
-iqc.begin();
+const iqcMgr = new CaptchaMgr({forks:false,logger:console,genOpts:{}});
+iqcMgr.begin();
 const authPreferences = {
-    customChecker: (ans1, ans2) => String(ans1).toLowerCase().split('').sort().join('')
-        === String(ans2).toLowerCase().split('').sort().join(''),
-    customChallenger: (captcha) => (captcha.data),
     requiredAnswers: 1,
     resetOnWrong: true,
-    answerTimeout: 60000
+    answerTimeout: 2*60000
 };
-const authr = new CaptchaAuthr(iqc, authPreferences);
+const authr = new CaptchaAuthr(iqcMgr, authPreferences);
 
 const getDate = off => {
     if (!off)
@@ -32,6 +28,8 @@ const comments = [{
 const processRequest = async req => {
     const [id, answer] = [req.sessionID, ((req.body || {}).captcha || {}).answer],
         authrResponse = await authr.tryAuth(id, answer);
+    console.log('response')
+    console.log(authrResponse)
     if (authr.authSucceeded(authrResponse)) {
         const cmt = req.body.comment; // comment consists of nick and body
         if (cmt && cmt.body) {

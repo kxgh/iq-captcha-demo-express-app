@@ -1,8 +1,0 @@
-{
-  "name": "captcha-authr",
-  "version": "1.0.0",
-  "description": "Captcha authenticator",
-  "main": "index.js",
-  "author": "Kristian",
-  "license": "ISC"
-}
