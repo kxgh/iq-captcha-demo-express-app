@@ -4,7 +4,7 @@
   "version": "1.1.0",
   "private": true,
   "dependencies": {
-    "@kxghnpm/kx-iqcaptcha": "^1.0.0",
+    "@kxghnpm/kx-iqcaptcha": "^1.0.1",
     "canvas": "^2.5.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
